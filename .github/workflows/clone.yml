@@ -10,4 +10,6 @@ jobs:
     name: Clone Master To QA
     runs-on: ubuntu-latest
     uses: actions/checkout@v2
-    run: git branch --delete qa && git checkout -b qa && git push origin qa
+    steps:
+      run: |
+        git branch --delete qa && git checkout -b qa && git push origin qa
