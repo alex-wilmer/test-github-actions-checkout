@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          git branch --delete qa && git checkout -b qa && git push origin qa
+          git fetch && git checkout qa && git checkout master && git branch --delete qa && git checkout -b qa && git push origin qa
